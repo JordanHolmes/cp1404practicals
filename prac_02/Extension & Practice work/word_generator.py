@@ -37,4 +37,3 @@ for kind in word_format:
 print(word)
 
 # TODO: Validate user input string if it's an empty string
-# TODO: Look at practical outline. wildcards. randomly generate word_format
