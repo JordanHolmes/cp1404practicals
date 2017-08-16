@@ -16,7 +16,7 @@ def main():
     """Main function"""
     password = generating_random_word(MIN_LENGTH, MAX_LENGTH)
     while not is_valid_password(password, SPECIAL_CHARS_REQUIRED):
-            password = generating_random_word(MIN_LENGTH, MAX_LENGTH)
+        password = generating_random_word(MIN_LENGTH, MAX_LENGTH)
     print("Your {} character password is valid: {}".format(len(password), password))
 
 
@@ -35,23 +35,14 @@ def generating_random_word(MIN_LENGTH, MAX_LENGTH):
 
     word = ""
     for kind in word_format:
-        if SPECIAL_CHARS_REQUIRED == "Y":
-            if kind == "s":
-                word += random.choice(SPECIAL_CHARACTERS)
-            elif kind == "c":
-                word += random.choice(CONSONANTS)
-            elif kind == "v":
-                word += random.choice(VOWELS)
-            else:
-                word += random.choice(DIGITS)
-        elif kind == "c":
+        if kind == "c":
             word += random.choice(CONSONANTS)
         elif kind == "v":
             word += random.choice(VOWELS)
-        else:
+        elif kind == "d":
             word += random.choice(DIGITS)
-
-
+        else:
+            word += random.choice(SPECIAL_CHARACTERS)
     return word
 
 
@@ -70,13 +61,12 @@ def is_valid_password(password, SPECIAL_CHARS_REQUIRED):
             count_upper += 1
         elif char.isdigit():
             count_digit += 1
+        elif char in SPECIAL_CHARACTERS:
+            count_special += 1
     if count_lower == 0 or count_digit == 0 or count_upper == 0:
         return False
 
     if SPECIAL_CHARS_REQUIRED == "Y":
-        for char in password:
-            if SPECIAL_CHARACTERS.__contains__(char):
-                count_special += 1
         if count_special == 0:
             return False
     # if we get here (without returning False), then the password must be valid

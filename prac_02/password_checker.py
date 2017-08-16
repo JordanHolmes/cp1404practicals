@@ -41,13 +41,12 @@ def is_valid_password(password):
             count_upper += 1
         elif char.isdigit():
             count_digit += 1
+        elif char in SPECIAL_CHARACTERS:
+            count_special += 1
     if count_lower == 0 or count_digit == 0 or count_upper == 0:
         return False
 
     if SPECIAL_CHARS_REQUIRED is True:
-        for char in password:
-            if SPECIAL_CHARACTERS.__contains__(char):
-                count_special += 1
         if count_special == 0:
             return False
     # if we get here (without returning False), then the password must be valid

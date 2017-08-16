@@ -32,13 +32,12 @@ while MIN_PRICE <= price <= MAX_PRICE:
         # generate a random floating-point number
         # between 0 and MAX_INCREASE
         price_change = random.uniform(0, MAX_INCREASE)
-        days_simulated += 1
     else:
         # generate a random floating-point number
         # between negative MAX_INCREASE and 0
         price_change = random.uniform(-MAX_DECREASE, 0)
-        days_simulated += 1
 
+    days_simulated += 1
     price *= (1 + price_change)
     print("On day {:3} price is: ${:,.2f}".format(days_simulated, price), file=out_file)
 
