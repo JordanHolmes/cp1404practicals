@@ -1,4 +1,5 @@
-"""Jordan Holmes"""
+"""Jordan Holmes
+edited for practical mark"""
 
 
 def main():
