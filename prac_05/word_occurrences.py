@@ -19,4 +19,5 @@ def main():
     for word in words:
         print("{:{}} : {:2}".format(word, longest_word, words_to_word_count[word]))
 
+
 main()
