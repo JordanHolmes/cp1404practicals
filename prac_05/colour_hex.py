@@ -10,7 +10,7 @@ COLOUR_HEX = {"white": "#ffffff", "tan": "#d2b48c", "slateblue": "#6a5acd", "pow
 colour = input("Enter the name of your colour: ").lower()
 while colour != "":
     if colour in COLOUR_HEX:
-        print(colour, "is", COLOUR_HEX[colour])
+        print("{} is {}".format(colour, COLOUR_HEX[colour]))
     else:
         print("Invalid colour name")
     colour = input("Enter the name of your colour: ").lower()

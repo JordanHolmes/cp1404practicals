@@ -3,6 +3,7 @@ CP1404/CP5632 Practical
 Word occurences in a dictionary
 """
 
+
 def main():
     words_to_word_count = {}
     user_words = input("Text: ").lower().split()
@@ -12,8 +13,7 @@ def main():
         else:
             words_to_word_count[user_word] = 1
 
-    words = list(words_to_word_count)
-    words.sort()
+    words = sorted(list(words_to_word_count))
     longest_word = max(len(word) for word in words)
 
     for word in words:
