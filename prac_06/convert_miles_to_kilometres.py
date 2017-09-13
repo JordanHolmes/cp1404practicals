@@ -1,10 +1,12 @@
 from kivy.app import App
 from kivy.lang import Builder
+from kivy.core.window import Window
 
 MILES_TO_KILOMETRES = 1.60934
 
 class Convertmilestokilometres(App):
     def build(self):
+        Window.size = 300, 300
         self.title = "Convert Miles to Kilometres"
         self.root = Builder.load_file('convert_miles_to_kilometres.kv')
         return self.root
