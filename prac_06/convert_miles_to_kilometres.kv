@@ -1,15 +1,20 @@
-<Widget>:
+<Label>:
+    color: (1, 0, 0, 1)
     canvas.before:
         Color:
             rgba: (0, 0, 1, 1)
         Rectangle:
             pos: self.pos
             size: self.size
-    color: (1, 1, 1, 1)
+
+<TextInput>
+    background_color: (0, 1, 0, 1)
+
 
 <Button>:
     background_color: (1, 0, 0, 1)
     background_down: ''
+    color: (1, 1, 1, 1)
     canvas.after:
         Color:
             rgba: (0, 0, 0, 1)
@@ -22,7 +27,6 @@ BoxLayout:
         orientation: 'horizontal'
         TextInput:
             text: '34'
-
             id: input_name
             on_text: app.handle_calculate()
         BoxLayout:
