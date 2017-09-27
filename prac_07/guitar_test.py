@@ -1,3 +1,5 @@
+"""Testing the guitar class and methods"""
+
 from prac_07.guitar import Guitar
 
 
