@@ -1,4 +1,4 @@
-""" """
+"""Demonstration of the guitar class"""
 
 from prac_07.guitar import Guitar
 

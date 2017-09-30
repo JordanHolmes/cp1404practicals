@@ -28,7 +28,7 @@ BoxLayout:
         TextInput:
             text: '34'
             id: input_name
-            on_text: app.handle_calculate()
+            on_text: app.handle_calculate(self.text)
         BoxLayout:
             orientation: 'vertical'
             Button:

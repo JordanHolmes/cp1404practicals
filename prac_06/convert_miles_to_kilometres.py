@@ -4,7 +4,8 @@ from kivy.core.window import Window
 
 MILES_TO_KILOMETRES = 1.60934
 
-class Convertmilestokilometres(App):
+
+class MilesToKilometresConverter(App):
     def build(self):
         Window.size = 300, 300
         self.title = "Convert Miles to Kilometres"
@@ -16,15 +17,16 @@ class Convertmilestokilometres(App):
             input_value = float(self.root.ids.input_name.text)
         except ValueError:
             input_value = 0
-        self.root.ids.input_name.text = str(input_value + change)
-        self.handle_calculate()
+        new_miles_text = str(input_value + change)
+        self.root.ids.input_name.text = new_miles_text
+        self.handle_calculate(new_miles_text)
 
-    def handle_calculate(self):
+    def handle_calculate(self, text):
         try:
-            input_value = float(self.root.ids.input_name.text)
+            input_value = float(text)
         except ValueError:
             input_value = 0
         self.root.ids.label.text = str(input_value * MILES_TO_KILOMETRES)
+#TODO: Don't repeat yourself when using the try to check for a float/int value
 
-
-Convertmilestokilometres().run()
+MilesToKilometresConverter().run()
