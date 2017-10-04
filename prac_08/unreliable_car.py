@@ -3,14 +3,15 @@
 from prac_08.car import Car
 from random import randint
 
-class UnreliableCar(Car):
 
-    def __init__(self, name, fuel, reliability = 50):
+class UnreliableCar(Car):
+    """Represent a UnreliableCar object"""
+
+    def __init__(self, name, fuel, reliability=50):
         """Initialise a UnreliableCar instance"""
         super().__init__(name, fuel)
         self.odometer = 0
         self.reliability = float(reliability)
-
 
     def __str__(self):
         """Default printing for UnreliableCar"""

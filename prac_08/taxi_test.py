@@ -9,7 +9,9 @@ def main():
     car_one.drive(40)
     print(car_one)
     car_one.start_fare()
+    car_one.drive(100)
     print(car_one)
+    print(car_one.get_fare())
 
 
 
