@@ -35,9 +35,6 @@ def run_tests():
     assert repeat_string("Python", 1) == "Python"
     # the test below should fail
     assert repeat_string("hi", 2) == "hi hi"
-    # additional test, to be removed before practical session
-    assert repeat_string("Jordan is the best",
-                         7) == "Jordan is the best Jordan is the best Jordan is the best Jordan is the best Jordan is the best Jordan is the best Jordan is the best"
 
     # TODO: 1. fix the repeat_string function above so that it passes the test
     # Hint: "-".join(["yo", "yo"] -> "yo-yo"
